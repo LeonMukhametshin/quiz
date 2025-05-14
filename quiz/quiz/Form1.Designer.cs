@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             radioButton1 = new RadioButton();
@@ -36,15 +37,17 @@
             radioButton4 = new RadioButton();
             button1 = new CustomControls.RJControls.RJButton();
             button2 = new CustomControls.RJControls.RJButton();
+            timerLabel = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(12, 81);
+            label1.Location = new Point(12, 94);
             label1.Name = "label1";
-            label1.Size = new Size(1076, 103);
+            label1.Size = new Size(776, 103);
             label1.TabIndex = 0;
             label1.Text = "label1";
             label1.Click += label1_Click;
@@ -117,7 +120,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Symbol", 15.75F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(150, 505);
+            button1.Location = new Point(0, 505);
             button1.Name = "button1";
             button1.Size = new Size(250, 62);
             button1.TabIndex = 7;
@@ -137,7 +140,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI Symbol", 15.75F, FontStyle.Bold);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(670, 505);
+            button2.Location = new Point(520, 505);
             button2.Name = "button2";
             button2.Size = new Size(250, 62);
             button2.TabIndex = 0;
@@ -146,11 +149,22 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click_1;
             // 
+            // timerLabel
+            // 
+            timerLabel.AutoSize = true;
+            timerLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            timerLabel.Location = new Point(656, 64);
+            timerLabel.Name = "timerLabel";
+            timerLabel.Size = new Size(54, 21);
+            timerLabel.TabIndex = 8;
+            timerLabel.Text = "label2";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1100, 600);
+            ClientSize = new Size(800, 600);
+            Controls.Add(timerLabel);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(radioButton4);
@@ -160,7 +174,7 @@
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(1100, 600);
-            MinimumSize = new Size(1100, 600);
+            MinimumSize = new Size(800, 600);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Form1";
@@ -178,5 +192,8 @@
         private RadioButton radioButton4;
         private CustomControls.RJControls.RJButton button1;
         private CustomControls.RJControls.RJButton button2;
+        public System.Windows.Forms.Timer questionTimer;
+        private Label timerLabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }

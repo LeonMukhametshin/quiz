@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <PackageReference Include="MaterialSkin" Version="0.2.1" />
+    <PackageReference Include="MaterialSkin.Updated" Version="0.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>
